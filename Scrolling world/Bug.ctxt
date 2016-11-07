@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Bug
+comment0.text=\r\n\ An\ demo\ class\ which\ is\ meant\ to\ be\ a\ camera\ follower.\r\n\ It\ moves\ to\ face\ your\ mouse\ cursor,\ and\ it\ can\ move\r\n\ back\ and\ forward.\r\n\ \r\n\ @author\ Sven\ van\ Nigtevecht\r\n\ @version\ 1.0\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Move\ to\ face\ the\ mouse,\r\n\ and\ listen\ to\ the\ up\ and\ down\ keys.\r\n
+numComments=2
