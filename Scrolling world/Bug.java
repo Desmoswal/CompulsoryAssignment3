@@ -17,6 +17,14 @@ public class Bug extends ScrollActor
      * Move to face the mouse,
      * and listen to the up and down keys.
      */
+    
+    public Bug()
+    {
+        GreenfootImage image = getImage();
+        image.scale(50, 65);
+        setImage(image);
+    }
+    
     public void act()
     {
         MouseInfo m = Greenfoot.getMouseInfo();
@@ -27,11 +35,13 @@ public class Bug extends ScrollActor
         }
         if (Greenfoot.isKeyDown("down")) {
             // move the camera backwards:
-            getWorld().moveCamera(-MOVE_AMOUNT);
+            //getWorld().moveCamera(-MOVE_AMOUNT);
         }
         if (Greenfoot.isKeyDown("up")) {
             // move the camera forwards:
-            getWorld().moveCamera(MOVE_AMOUNT);
+            //getWorld().moveCamera(MOVE_AMOUNT);
+			move(2);
+			//getWorld().setCameraLocation(this.getX()+1, this.getY()+1);
         }
     }
 }

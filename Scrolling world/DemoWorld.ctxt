@@ -1,7 +1,12 @@
 #BlueJ class context
 comment0.target=DemoWorld
-comment0.text=\r\n\ A\ little\ demo\ world\ to\ show\ you\ how\ this\ works.\r\n\ \r\n\ @author\ Sven\ van\ Nigtevecht\r\n
+comment0.text=\r\n\ A\ little\ demo\ world\ to\ show\ you\ how\ this\ works.\r\n\ \r\n\ @author\ Mark\r\n
 comment1.params=
 comment1.target=DemoWorld()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ DemoWorld.\r\n
-numComments=2
+comment2.params=
+comment2.target=void\ setValues()
+comment3.params=mg
+comment3.target=boolean\ isGround(java.awt.Color)
+comment4.params=x\ y
+comment4.target=boolean\ isGround(int,\ int)
+numComments=5
