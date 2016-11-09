@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Wed Nov 09 11:51:13 CET 2016
+#Wed Nov 09 12:38:44 CET 2016
 editor.fx.0.height=700
 target2.width=80
 target5.naviview.expanded=false
@@ -46,7 +46,7 @@ target4.typeParameters=
 target5.name=Box
 world.lastInstantiated=MyWorld
 publish.locked=false
-mainWindow.width=1384
+mainWindow.width=1380
 readme.width=47
 readme.editor.width=900
 target5.height=50
@@ -88,7 +88,7 @@ target2.name=Score
 dependency9.from=Wombat
 readme.name=@README
 readme.editor.height=700
-editor.swing.0.width=701
+editor.swing.0.width=700
 target6.naviview.expanded=false
 target6.name=MyWorld
 target6.editor.y=20
