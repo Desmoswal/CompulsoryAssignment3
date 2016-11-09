@@ -4,4 +4,6 @@ comment0.text=\r\n\ An\ object\ to\ act\ as\ an\ obstacle.\r\n
 comment1.params=
 comment1.target=Box()
 comment1.text=\r\n\ Creates\ the\ object\ and\ sizes\ its\ image.\r\n
-numComments=2
+comment2.params=a\ size
+comment2.target=Box(int,\ int)
+numComments=3
