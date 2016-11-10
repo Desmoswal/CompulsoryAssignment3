@@ -21,7 +21,7 @@ public class Score extends Actor
      */
     private void updateImage()
     {
-        setImage(new GreenfootImage("Jumps: "+score, 18, Color.black, new Color(0, 0, 0, 0)));
+        setImage(new GreenfootImage("Score: "+score, 18, Color.black, new Color(0, 0, 0, 0)));
     }
     
     /**
