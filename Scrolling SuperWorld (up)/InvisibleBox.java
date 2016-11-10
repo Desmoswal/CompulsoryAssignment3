@@ -23,7 +23,7 @@ public class InvisibleBox extends Traps
     }
     @Override
     public void act(){
-        if(visible)p.check(getClass());
+        if(visible)p.check(getClass(),this);
         else isActivated();
     }
     private void popUp(){

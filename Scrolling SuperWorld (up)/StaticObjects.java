@@ -11,7 +11,7 @@ public abstract class StaticObjects extends Actor
     public void act(){
         if(isTouching(Player.class)){
             Player p=(Player)getOneIntersectingObject(Player.class);
-            p.check(getClass());
+            p.check(getClass(),this);
         }
     }
 }
