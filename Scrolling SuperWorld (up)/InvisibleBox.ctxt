@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=InvisibleBox
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ InvisibleBox\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=option
+comment1.target=InvisibleBox(int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ popUp()
+comment4.params=
+comment4.target=void\ isActivated()
+numComments=5
