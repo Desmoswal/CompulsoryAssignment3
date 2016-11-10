@@ -128,21 +128,16 @@ public class MyWorld extends SWorld
         return getHeight()-h;
     }
     private void construct(){
-        // in the following statement, the main actor is placed in the center of the window
+         // in the following statement, the main actor is placed in the center of the window
         setMainActor(new Player(),100, height(75)); // the int parameters are centered window x and y ranges
         // to start the main actor elsewhere
         mainActor.setLocation(100, height(75));
         GreenfootImage bg = new GreenfootImage("Mario LevelBG.png");
         setScrollingBackground(bg); // set the scolling background image
-        // add other scrollable objects normally
-        addObject(new Ground(5000), 2500,height(25));
-        addObject(new Box(), 20,height(75));
-        addObject(new Box(0,500), 300,height(325));
-        addObject(new Box(),575,height(120));
-        addObject(new TrapBox(),1000,height(120));
-        // use of the following also adds scrollable objects
-        addObject(new Box(1,400), 20, height(300), true); // the boolean determines scrollable state
-        // use the following for non-scrollable objects
+        addObject(new Box(1,getHeight()),25,getHeight()/2);
+        addObject(new Ground(1000),500,height(25));
+        addObject(new Ground(550),1400,height(25));
+        addObject(new Ground(600),2200,height(25));
         addObject(new Score(), 40,height(50), false);
     }
 }
