@@ -6,7 +6,7 @@ import greenfoot.*;
  * <li>Right arrow moves actor right (toward right scroll limit)</li>
  * <li>Up arrow makes the actor jump</li><l>
  */
-public class Wombat extends Actor
+public class Player extends Actor
 {
     final int jSpeed = 20; // the initial 'jump' speed
     int ySpeed = 0, xSpeed = 0; // the initial vertical and horizontal speeds
@@ -20,6 +20,7 @@ public class Wombat extends Actor
     {
         getDirection();
         move();
+        if(getY()>=getWorld().getHeight())die();
         incrementScore();
     }
 
@@ -30,7 +31,7 @@ public class Wombat extends Actor
     private void move()
     {
         ySpeed++; // adds gravity
-        if (xSpeed != 0 && onGround) xSpeed+=aboutFace?1:-1; // add friction
+        if (xSpeed != 0 && onGround) xSpeed+=aboutFace?2:-2; // add friction
         setLocation(getX()+xSpeed/10, getY()+ySpeed/2);
         // check for change in horizontal direction
         if((xSpeed>0 && aboutFace) || (xSpeed<0 && !aboutFace)) 
@@ -42,30 +43,7 @@ public class Wombat extends Actor
         // check for obstacles
         onGround=false; // initialize value
         // check below the actor
-        while(getOneObjectAtOffset(0, getImage().getHeight()/2+1, null)!=null)
-        {
-            setLocation(getX(), getY()-1); 
-            onGround=true; 
-            ySpeed=0;
-        }
-        // check above the actor
-        while(getOneObjectAtOffset(0, -getImage().getHeight()/2-1, null)!=null) 
-        {
-            setLocation(getX(), getY()+1);
-            ySpeed = 0;
-        }
-        // check to right of actor
-        while(getOneObjectAtOffset(getImage().getWidth()/2+1, 0, null)!=null)
-        {
-            setLocation(getX()-1, getY());
-            xSpeed = 0;
-        }
-        // check to left of actor
-        while(getOneObjectAtOffset(-getImage().getWidth()/2-1, 0, null)!=null)
-        {
-            setLocation(getX()+1, getY());
-            xSpeed = 0;
-        }
+   
         if ("space".equals(Greenfoot.getKey()))
         {
             Actor bullet = new Bullet();
@@ -95,6 +73,36 @@ public class Wombat extends Actor
         if(Greenfoot.isKeyDown("space")/*getcoin*/)
         {
             ((Score) getWorld().getObjects(Score.class).get(0)).add(1);
+        }
+    }
+    public void die(){
+            Greenfoot.setWorld(new MyWorld());  
+    }
+    public void check(){
+        // check below the actor
+        while(getOneObjectAtOffset(0, getImage().getHeight()/2+1, null)!=null)
+        {
+            setLocation(getX(), getY()-1); 
+            onGround=true; 
+            ySpeed=0;
+        }
+        // check above the actor
+        while(getOneObjectAtOffset(0, -getImage().getHeight()/2-1, null)!=null) 
+        {
+            setLocation(getX(), getY()+1);
+            ySpeed = 0;
+        }
+        // check to right of actor
+        while(getOneObjectAtOffset(getImage().getWidth()/2+1, 0, null)!=null)
+        {
+            setLocation(getX()-1, getY());
+            xSpeed = 0;
+        }
+        // check to left of actor
+        while(getOneObjectAtOffset(-getImage().getWidth()/2-1, 0, null)!=null)
+        {
+            setLocation(getX()+1, getY());
+            xSpeed = 0;
         }
     }
 }

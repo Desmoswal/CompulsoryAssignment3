@@ -1,5 +1,5 @@
 #BlueJ class context
-comment0.target=Wombat
+comment0.target=Player
 comment0.text=\r\n\ A\ user-controlled\ actor\ that\ walks\ and\ jumps,\ and\ is\ pulled\ down\ by\ gravity.\r\n\ <l><li>Left\ arrow\ moves\ actor\ left\ (toward\ left\ scroll\ limit)</li>\r\n\ <li>Right\ arrow\ moves\ actor\ right\ (toward\ right\ scroll\ limit)</li>\r\n\ <li>Up\ arrow\ makes\ the\ actor\ jump</li><l>\r\n
 comment1.params=
 comment1.target=void\ act()
@@ -12,4 +12,8 @@ comment3.target=void\ getDirection()
 comment3.text=\r\n\ Determines\ any\ changes\ in\ horizontal\ and\ vertical\ speeds\ for\ the\ actor.\r\n
 comment4.params=
 comment4.target=void\ incrementScore()
-numComments=5
+comment5.params=
+comment5.target=void\ die()
+comment6.params=
+comment6.target=void\ check()
+numComments=7

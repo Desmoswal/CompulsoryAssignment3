@@ -3,7 +3,7 @@ import greenfoot.*;
 /**
  * An object to act as an obstacle.
  */
-public class Box extends Actor
+public class Box extends StaticObjects
 {
     /**
      * Creates the object and sizes its image.

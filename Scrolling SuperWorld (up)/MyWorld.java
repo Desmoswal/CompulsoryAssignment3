@@ -13,7 +13,7 @@ public class MyWorld extends SWorld
     {    
         super(700, 500, 1, 6000); // scroll world constructor call; last parameter is scroll width
         // in the following statement, the main actor is placed in the center of the window
-        setMainActor(new Wombat(),100, getHeight()-75); // the int parameters are centered window x and y ranges
+        setMainActor(new Player(),100, getHeight()-75); // the int parameters are centered window x and y ranges
         // to start the main actor elsewhere
         mainActor.setLocation(100, getHeight()-75);
         GreenfootImage bg = new GreenfootImage("Level1.png");
@@ -25,6 +25,7 @@ public class MyWorld extends SWorld
         //addObject(new Box(), 380, getHeight()-150, true); // the boolean determines scrollable state
         // use the following for non-scrollable objects
         addObject(new Score(), 40,getHeight()-50, false);
+        addObject(new TrapBox(),950,height(75));
         prepare();
     }
 
@@ -122,5 +123,26 @@ public class MyWorld extends SWorld
         addObject(ground3,-1500,getHeight()-25);
         Ground ground4 = new Ground(1000);
         addObject(ground4,-2400,getHeight()-25);
+    }
+    public int height(int h){
+        return getHeight()-h;
+    }
+    private void construct(){
+        // in the following statement, the main actor is placed in the center of the window
+        setMainActor(new Player(),100, height(75)); // the int parameters are centered window x and y ranges
+        // to start the main actor elsewhere
+        mainActor.setLocation(100, height(75));
+        GreenfootImage bg = new GreenfootImage("Mario LevelBG.png");
+        setScrollingBackground(bg); // set the scolling background image
+        // add other scrollable objects normally
+        addObject(new Ground(5000), 2500,height(25));
+        addObject(new Box(), 20,height(75));
+        addObject(new Box(0,500), 300,height(325));
+        addObject(new Box(),575,height(120));
+        addObject(new TrapBox(),1000,height(120));
+        // use of the following also adds scrollable objects
+        addObject(new Box(1,400), 20, height(300), true); // the boolean determines scrollable state
+        // use the following for non-scrollable objects
+        addObject(new Score(), 40,height(50), false);
     }
 }

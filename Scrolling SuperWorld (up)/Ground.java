@@ -3,7 +3,7 @@ import greenfoot.*;
 /**
  * A surface for the main actor to gravitate toward.
  */
-public class Ground extends Actor
+public class Ground extends StaticObjects
 {
     /**
      * Creates a long platform for the main actor.
