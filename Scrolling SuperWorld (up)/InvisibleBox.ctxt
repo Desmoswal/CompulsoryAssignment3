@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=InvisibleBox
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ InvisibleBox\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ InvisibleBox\ here.\r\n\ 0\ touching\ right\ side\ \r\n\ 1\ touching\ from\ below\r\n\ 2\ touching\ left\ side\r\n\ 3\ touching\ from\ above\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=option
 comment1.target=InvisibleBox(int)
 comment2.params=

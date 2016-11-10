@@ -7,13 +7,14 @@ import java.awt.Color;
 public class Score extends Actor
 {
     int score = 0; // the score field
-    
+    private static Score myScore;
     /**
      * Creates the object and its initial image.
      */
     public Score()
     {
         updateImage();
+        myScore=this;
     }
     
     /**
@@ -33,5 +34,8 @@ public class Score extends Actor
     {
         score+=addAmt;
         updateImage();
+    }
+    public static Score getScore(){
+        return myScore;
     }
 }

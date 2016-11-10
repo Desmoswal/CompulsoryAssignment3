@@ -10,4 +10,6 @@ comment2.text=\r\n\ Creates\ (or\ re-creates)\ the\ image\ of\ the\ object.\r\n
 comment3.params=addAmt
 comment3.target=void\ add(int)
 comment3.text=\r\n\ Adusts\ the\ score\ by\ <i>addAmt</i>.\r\n\r\n\ @param\ addAmt\:\ the\ change\ in\ the\ score\ (negatives\ decrease\ the\ score)\r\n
-numComments=4
+comment4.params=
+comment4.target=Score\ getScore()
+numComments=5

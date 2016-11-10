@@ -2,6 +2,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class InvisibleBox here.
+ * 0 touching right side 
+ * 1 touching from below
+ * 2 touching left side
+ * 3 touching from above
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -35,16 +39,16 @@ public class InvisibleBox extends Traps
             p=(Player)getOneIntersectingObject(Player.class);
             switch(option){
                 case 0:
-                    if(p.xSpeed<0)popUp();
+                    if(getX()<p.getX()&&p.xSpeed<0)popUp();
                     break;
                 case 1:
-                    if(p.ySpeed<0)popUp();
+                    if(getY()<p.getY()&&p.ySpeed<0)popUp();
                     break;
                 case 2:
-                    if(p.xSpeed>0)popUp();
+                    if(getX()>p.getX()&&p.xSpeed>0)popUp();
                     break;
                 case 3:
-                    if(p.ySpeed>0)popUp();
+                    if(getY()>p.getY()&&p.ySpeed>0)popUp();
                     break;
                 default:
                     System.out.println("Error");

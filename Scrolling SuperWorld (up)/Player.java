@@ -20,10 +20,10 @@ public class Player extends Actor
     {
         getDirection();
         move();
-        if(getY()>=getWorld().getHeight())die();
         incrementScore();
+        if(getY()>=getWorld().getHeight())die();
     }
-
+    
     /**
      * Moves the actor with appropriate image.  Checks for obstacles and adjusts
      * the position of the actor accordingly.
@@ -31,7 +31,8 @@ public class Player extends Actor
     private void move()
     {
         ySpeed++; // adds gravity
-        if (xSpeed != 0 && onGround) xSpeed+=aboutFace?2:-2; // add friction
+        if (xSpeed != 0 && onGround)xSpeed+=aboutFace?3:-3; // add friction
+        
         setLocation(getX()+xSpeed/10, getY()+ySpeed/2);
         // check for change in horizontal direction
         if((xSpeed>0 && aboutFace) || (xSpeed<0 && !aboutFace)) 
@@ -39,32 +40,24 @@ public class Player extends Actor
             getImage().mirrorHorizontally();
             aboutFace = !aboutFace;
         }
-
+        
         // check for obstacles
         onGround=false; // initialize value
-        
+       
     }
-
+    
     /**
      * Determines any changes in horizontal and vertical speeds for the actor.
      */
     private void getDirection()
     {
-        //         if (!onGround) return; // if not mid-air changes allowed
+        //if (!onGround) return; // if not mid-air changes allowed
         // sets requested direction of move, or continues in current direction
-        if (Greenfoot.isKeyDown("left") && xSpeed>-50) xSpeed-=2; // check left
-        if (Greenfoot.isKeyDown("right") && xSpeed<50) xSpeed+=2; // check right
+        if (Greenfoot.isKeyDown("left") && xSpeed>-50) xSpeed-=3; // check left
+        if (Greenfoot.isKeyDown("right") && xSpeed<50) xSpeed+=3; // check right
         if (Greenfoot.isKeyDown("up") && onGround) // check jump
         {
             ySpeed -= jSpeed; // add jump speed
-        }
-    }
-    
-    public void incrementScore()
-    {
-        if(Greenfoot.isKeyDown("space")/*getcoin*/)
-        {
-            ((Score) getWorld().getObjects(Score.class).get(0)).add(1);
         }
     }
     public void die(){
@@ -95,6 +88,14 @@ public class Player extends Actor
         {
             setLocation(getX()+1, getY());
             xSpeed = 0;
+        }
+    }
+    public void incrementScore()
+    {
+        if(isTouching(Coin.class))
+        {
+            Score.getScore().add(1);
+            removeTouching(Coin.class);
         }
     }
 }

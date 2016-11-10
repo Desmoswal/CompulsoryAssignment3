@@ -10,7 +10,6 @@ public class Box extends StaticObjects
      */
     public Box()
     {
-        
     }
     public Box(int a,int size){
         GreenfootImage box = new GreenfootImage("Box(50x50).png");
