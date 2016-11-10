@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=TrapGround
+comment0.text=\r\n\ A\ surface\ for\ the\ main\ actor\ to\ gravitate\ toward.\r\n
+comment1.params=size
+comment1.target=TrapGround(int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ checkActivated()
+numComments=4

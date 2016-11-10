@@ -8,10 +8,4 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public abstract class Traps extends Actor
 {
-    public void act(){
-        if(isTouching(Player.class)){
-            Player p=(Player)getOneIntersectingObject(Player.class);
-            p.die();
-        }
-    }
 }

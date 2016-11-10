@@ -42,15 +42,7 @@ public class Player extends Actor
 
         // check for obstacles
         onGround=false; // initialize value
-        // check below the actor
-   
-        if ("space".equals(Greenfoot.getKey()))
-        {
-            Actor bullet = new Bullet();
-            if (aboutFace) bullet.turn(180);
-            getWorld().addObject(bullet, getX(), getY());
-            bullet.move(32);
-        }
+        
     }
 
     /**
