@@ -8,7 +8,7 @@ import greenfoot.*;
  */
 public class Player extends Actor
 {
-    final int jSpeed = 20; // the initial 'jump' speed
+    final int jSpeed = 25; // the initial 'jump' speed
     int ySpeed = 0, xSpeed = 0; // the initial vertical and horizontal speeds
     boolean aboutFace; // the direction (left or right) the actor is facing
     boolean onGround; // the state of the actor being set on an object or not
