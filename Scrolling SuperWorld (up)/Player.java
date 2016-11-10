@@ -80,26 +80,26 @@ public class Player extends Actor
     }
     public void check(){
         // check below the actor
-        while(getOneObjectAtOffset(0, getImage().getHeight()/2+1, null)!=null)
+        while(getOneObjectAtOffset(0, getImage().getHeight()/2+1, StaticObjects.class)!=null)
         {
             setLocation(getX(), getY()-1); 
             onGround=true; 
             ySpeed=0;
         }
         // check above the actor
-        while(getOneObjectAtOffset(0, -getImage().getHeight()/2-1, null)!=null) 
+        while(getOneObjectAtOffset(0, -getImage().getHeight()/2-1, StaticObjects.class)!=null) 
         {
             setLocation(getX(), getY()+1);
             ySpeed = 0;
         }
         // check to right of actor
-        while(getOneObjectAtOffset(getImage().getWidth()/2+1, 0, null)!=null)
+        while(getOneObjectAtOffset(getImage().getWidth()/2+1, 0, StaticObjects.class)!=null)
         {
             setLocation(getX()-1, getY());
             xSpeed = 0;
         }
         // check to left of actor
-        while(getOneObjectAtOffset(-getImage().getWidth()/2-1, 0, null)!=null)
+        while(getOneObjectAtOffset(-getImage().getWidth()/2-1, 0, StaticObjects.class)!=null)
         {
             setLocation(getX()+1, getY());
             xSpeed = 0;
